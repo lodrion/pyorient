@@ -78,7 +78,7 @@ class Scripts(object):
                     split_body[i] = re.sub(
                         r'\b{}\b'.format(k)
                         , '{}'.format(repr(v) if isinstance(v, str) else v)
-                        , s)
+                        , split_body[i])
 
         return ''.join(split_body)
 
